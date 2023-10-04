@@ -1,0 +1,48 @@
+REMARK  MTL-AG-ATG-FS selected features: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 16, 24, 25, 31, 37, 41, 45, 57, 62, 64, 69, 79, 94, 101, 104, 108, 152, 153, 155, 156, 157, 158, 159, 241, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 308, 309, 310, 311, 312, 313, 349, 350, 351, 352, 353, 354, 355, 356, 359, 422, 450, 451, 453, 458, 459, 460, 462, 463, 464, 465, 466, 467, 468, 470, 471, 472, 473, 474, 476, 477, 478, 479, 480, 483, 484, 485, 486, 487, 488, 489, 490, 492, 493, 495, 499, 505, 507, 508, 518, 519, 520, 522, 531, 532, 533, 535, 536, 537, 538, 539, 540, 542, 543, 544, 545, 546, 547, 549, 554, 555, 556, 557, 560, 562, 563, 564, 594, 595, 596, 597, 640, 652, 686, 752, 759, 807, 951, 1136, 1359, 1663, 1664, 1748, 1750, 1793, 1794, 1904, 2341, 2344]
+REMARK PROseq: MDPTTPAWGTESTTVNGNDQALLLLCGKETLIPVFLILFIALVGLVGNGFVLWLLGFRMRRNAFSVYVLSLAGADFLFLCFQIINCLVYLSNFFCSISINFPSFFTTVMTCAYLAGLSMLSTVSTERCLSVLWPIWYRCRRPRHLSAVVCVLLWALSLLLSILEGKFCGFLFSDGDSGWCQTFDFITAAWLIFLFMVLCGSSLALLVRILCGSRGLPLTRLYLTILLTVLVFLLCGLPFGIQWFLILWIWKDSDVLFCHIHPVSVVLSSLNSSANPIIYFFVGSFRKQWRLQQPILKLALQRALQDIAEVDHSEGCFRQGTPEMSRSSLV 
+REMARK PDBseq: CKNFF 
+REMARK aacode_color: ['']
+REMARK aacode_color_selected:  
+REMARK pymol: select resi  
+
+ATOM   8313  N   CYS A   2     119.781 141.085 169.504  1.00      0                
+ATOM   8314  CA  CYS A   2     119.500 140.557 168.175  1.00      0                
+ATOM   8315  C   CYS A   2     120.025 139.134 168.027  1.00      0                
+ATOM   8316  O   CYS A   2     119.529 138.211 168.672  1.00      0                
+ATOM   8317  CB  CYS A   2     120.108 141.459 167.099  1.00      0                
+ATOM   8318  SG  CYS A   2     121.897 141.681 167.227  1.00      0                
+ATOM   8319  N   LYS A   3     121.030 138.962 167.172  1.00      0                
+ATOM   8320  CA  LYS A   3     121.622 137.658 166.905  1.00      0                
+ATOM   8321  C   LYS A   3     123.127 137.814 166.775  1.00      0                
+ATOM   8322  O   LYS A   3     123.602 138.698 166.056  1.00      0                
+ATOM   8323  CB  LYS A   3     121.039 137.046 165.631  1.00      0                
+ATOM   8324  CG  LYS A   3     121.487 135.636 165.318  1.00      0                
+ATOM   8325  CD  LYS A   3     120.782 135.138 164.073  1.00      0                
+ATOM   8326  CE  LYS A   3     121.268 133.771 163.670  1.00      0                
+ATOM   8327  NZ  LYS A   3     120.581 133.291 162.442  1.00      0                
+ATOM   8328  N   ASN A   4     123.870 136.954 167.469  1.00      0                
+ATOM   8329  CA  ASN A   4     125.327 137.004 167.459  1.00      0                
+ATOM   8330  C   ASN A   4     125.862 136.935 166.035  1.00      0                
+ATOM   8331  O   ASN A   4     125.716 135.912 165.361  1.00      0                
+ATOM   8332  CB  ASN A   4     125.892 135.858 168.301  1.00      0                
+ATOM   8333  CG  ASN A   4     127.389 135.953 168.490  1.00      0                
+ATOM   8334  OD1 ASN A   4     127.892 136.896 169.099  1.00      0                
+ATOM   8335  ND2 ASN A   4     128.111 134.968 167.973  1.00      0                
+ATOM   8336  N   PHE A   5     126.494 138.012 165.576  1.00      0                
+ATOM   8337  CA  PHE A   5     127.023 138.088 164.221  1.00      0                
+ATOM   8338  C   PHE A   5     128.275 137.231 164.085  1.00      0                
+ATOM   8339  O   PHE A   5     128.682 136.548 165.029  1.00      0                
+ATOM   8340  CB  PHE A   5     127.338 139.537 163.845  1.00      0                
+ATOM   8341  N   PHE A   6     128.880 137.266 162.903  1.00      0                
+ATOM   8342  CA  PHE A   6     130.058 136.450 162.637  1.00      0                
+ATOM   8343  C   PHE A   6     131.151 137.258 161.942  1.00      0                
+ATOM   8344  O   PHE A   6     132.300 137.280 162.385  1.00      0                
+ATOM   8345  CB  PHE A   6     129.676 135.229 161.795  1.00      0                
+ATOM   8346  CG  PHE A   6     129.157 135.567 160.425  1.00      0                
+ATOM   8347  CD1 PHE A   6     127.809 135.787 160.218  1.00      0                
+ATOM   8348  CD2 PHE A   6     130.012 135.623 159.340  1.00      0                
+ATOM   8349  CE1 PHE A   6     127.328 136.089 158.961  1.00      0                
+ATOM   8350  CE2 PHE A   6     129.536 135.921 158.081  1.00      0                
+ATOM   8351  CZ  PHE A   6     128.193 136.153 157.891  1.00      0                
+
+END
