@@ -8,7 +8,7 @@ The drug discovery of G protein-coupled receptors (GPCRs) superfamily using comp
 Keywords
 Multitask Learning; G Protein-Coupled Receptors; GPCR; Feature Selection; Ligand-Based Virtual Screening 
 
-![image]Figure 1.jpg 
+![image](Figure 1.jpg)
 
 #Installation and envirment setup
 You may download whole directory with script files and compressed result files.
@@ -23,13 +23,10 @@ sh extract_files.sh
 ```
 
 Script files:
-`GPCR_MTL_dataprocess.ipynb`: scripts + original dataset
-`GPCR_MTL_autogluontrain.ipynb`: scripts for separate protein Agonist using Autogluon + separate protein Antagonist using Autogluon + separate protein Agonist & Antagonist using Autogluon
-`GPCR_MTL_FeatureSelection.ipynb`: scripts for using mRMR feature selection of the files + FeatureSelection_GPCRtrain + result data
-`GPCR_MTL_TRAINevaluate.ipynb`: scripts for evaluation of validation data and orphan data + result data
-`GPCR_MTL_similarity.ipynb`: scripts for calculate Tanimoto similarity with or without mRMR selected features in 7 parts of the GPCR
-`GPCR_MTL_colorPDB.ipynb`: scripts for mapping the mRMR selected features into the protein structure files
-
-
-
+1. `GPCR_MTL_dataprocess.ipynb`: scripts + original dataset
+2. `GPCR_MTL_autogluontrain.ipynb`: scripts for separate protein Agonist using Autogluon + separate protein Antagonist using Autogluon + separate protein Agonist & Antagonist using Autogluon
+3. `GPCR_MTL_FeatureSelection.ipynb`: scripts for using mRMR feature selection of the files + FeatureSelection_GPCRtrain + result data
+4. `GPCR_MTL_TRAINevaluate.ipynb`: scripts for evaluation of validation data and orphan data + result data
+5. `GPCR_MTL_similarity.ipynb`: scripts for calculate Tanimoto similarity with or without mRMR selected features in 7 parts of the GPCR
+6. `GPCR_MTL_colorPDB.ipynb`: scripts for mapping the mRMR selected features into the protein structure files
 
