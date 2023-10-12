@@ -13,7 +13,7 @@ Multitask Learning; G Protein-Coupled Receptors; GPCR; Feature Selection; Ligand
 
 
 
-# Installation and envirment setup
+# Python installation and environment setup
 You may download whole directory with script files and compressed result files.
 
 1. use the python_env_setup.sh file to setup all dependencies
