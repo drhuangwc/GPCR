@@ -8,9 +8,11 @@ The drug discovery of G protein-coupled receptors (GPCRs) superfamily using comp
 Keywords
 Multitask Learning; G Protein-Coupled Receptors; GPCR; Feature Selection; Ligand-Based Virtual Screening 
 
-![image](Figure 1.jpg)
+![image]('Figure 1.jpg')
 
-#Installation and envirment setup
+
+
+# Installation and envirment setup
 You may download whole directory with script files and compressed result files.
 
 1. use the python_env_setup.sh file to setup all dependencies
