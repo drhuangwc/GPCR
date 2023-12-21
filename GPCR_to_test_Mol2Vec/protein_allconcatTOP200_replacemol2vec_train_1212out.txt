@@ -1,0 +1,557 @@
+nohup: ignoring input
+2023/12/13 16:33:50
+Now path =  /home1/drhuangwc/AAALAB/GPCR5b/Interspecies_20220915_AgonistAntagonist_datacode2ALLcolumns/GPCR_to_test_Mol2Vec/seperatePROTEIN_Mol2Vec
+To train files:  ['GPCR_to_trainAgonistAntagonist_humanalltrainconcat_selefeatureTOP200.csv'] 1
+ ------------------------------  2 GPCR_to_trainAgonistAntagonist_humanalltrainconcat_selefeatureTOP200.csv  ------------------------------ 
+
+ Run AutoGluon: ( 2 ) GPCR_to_trainAgonistAntagonist_humanalltrainconcat_selefeatureTOP200.csv  -  humanalltrainconcat_selefeatureTOP200
+
+ 2023/12/13 16:33:50 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Split dataset :  GPCR_to_trainAgonistAntagonist_humanalltrainconcat_selefeatureTOP200.csv  ->  GPCR_to_trainAgonistAntagonist_humanalltrainconcat_selefeatureTOP200_train.csv  &  GPCR_to_trainAgonistAntagonist_humanalltrainconcat_selefeatureTOP200_valid.csv
+
+ Now training:  humanalltrainconcat_selefeatureTOP200  , training data size:  80750 464  , test data size:  20188 464  , 
+ Train time:  108.0  mins  at 2023/12/13 16:34:35 
+
+
+
+Warning: path already exists! This predictor may overwrite an existing predictor! path="AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min"
+============ fit kwarg info ============
+User Specified kwargs:
+{'auto_stack': True, 'excluded_model_types': ['KNN']}
+Full kwargs:
+{'_feature_generator_kwargs': None,
+ '_save_bag_folds': None,
+ 'ag_args': None,
+ 'ag_args_ensemble': None,
+ 'ag_args_fit': None,
+ 'auto_stack': True,
+ 'calibrate': 'auto',
+ 'excluded_model_types': ['KNN'],
+ 'feature_generator': 'auto',
+ 'feature_prune_kwargs': None,
+ 'holdout_frac': None,
+ 'hyperparameter_tune_kwargs': None,
+ 'keep_only_best': False,
+ 'name_suffix': None,
+ 'num_bag_folds': None,
+ 'num_bag_sets': None,
+ 'num_stack_levels': None,
+ 'pseudo_data': None,
+ 'quantile_levels': None,
+ 'refit_full': False,
+ 'save_space': False,
+ 'set_best_to_refit_full': False,
+ 'unlabeled_data': None,
+ 'use_bag_holdout': False,
+ 'verbosity': 3}
+========================================
+Stack configuration (auto_stack=True): num_stack_levels=1, num_bag_folds=8, num_bag_sets=20
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/learner.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/predictor.pkl
+Beginning AutoGluon training ... Time limit = 6480.0s
+AutoGluon will save models to "AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/"
+AutoGluon Version:  0.5.2
+Python Version:     3.7.11
+Operating System:   Linux
+Train Data Rows:    80750
+Train Data Columns: 463
+Label Column: ActivityValue_log_EC50
+Preprocessing data ...
+Using Feature Generators to preprocess the data ...
+Fitting AutoMLPipelineFeatureGenerator...
+	Available Memory:                    1141502.47 MB
+	Train Data (Original)  Memory Usage: 299.1 MB (0.0% of available memory)
+	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
+	Stage 1 Generators:
+		Fitting AsTypeFeatureGenerator...
+			Note: Converting 33 features to boolean dtype as they only contain 2 unique values.
+			Original Features (exact raw dtype, raw dtype):
+				('float64', 'float') : 301 | ['Mol2Vec_0', 'Mol2Vec_1', 'Mol2Vec_2', 'Mol2Vec_3', 'Mol2Vec_4', ...]
+				('int64', 'int')     : 162 | ['Protein_code1_594', 'Protein_code1_807', 'Protein_code1_272', 'Protein_code1_278', 'Protein_code1_686', ...]
+			Types of features in original data (raw dtype, special dtypes):
+				('float', []) : 301 | ['Mol2Vec_0', 'Mol2Vec_1', 'Mol2Vec_2', 'Mol2Vec_3', 'Mol2Vec_4', ...]
+				('int', [])   : 162 | ['Protein_code1_594', 'Protein_code1_807', 'Protein_code1_272', 'Protein_code1_278', 'Protein_code1_686', ...]
+			Types of features in processed data (raw dtype, special dtypes):
+				('float', [])     : 300 | ['Mol2Vec_0', 'Mol2Vec_1', 'Mol2Vec_2', 'Mol2Vec_3', 'Mol2Vec_4', ...]
+				('int', [])       : 130 | ['Protein_code1_594', 'Protein_code1_807', 'Protein_code1_272', 'Protein_code1_686', 'Protein_code1_1794', ...]
+				('int', ['bool']) :  33 | ['Protein_code1_278', 'Protein_code1_282', 'Protein_code1_285', 'Protein_code1_1', 'Protein_code1_16', ...]
+			1.8s = Fit runtime
+			463 features in original data used to generate 463 features in processed data.
+	Stage 2 Generators:
+		Fitting FillNaFeatureGenerator...
+			Types of features in original data (raw dtype, special dtypes):
+				('float', [])     : 300 | ['Mol2Vec_0', 'Mol2Vec_1', 'Mol2Vec_2', 'Mol2Vec_3', 'Mol2Vec_4', ...]
+				('int', [])       : 130 | ['Protein_code1_594', 'Protein_code1_807', 'Protein_code1_272', 'Protein_code1_686', 'Protein_code1_1794', ...]
+				('int', ['bool']) :  33 | ['Protein_code1_278', 'Protein_code1_282', 'Protein_code1_285', 'Protein_code1_1', 'Protein_code1_16', ...]
+			Types of features in processed data (raw dtype, special dtypes):
+				('float', [])     : 300 | ['Mol2Vec_0', 'Mol2Vec_1', 'Mol2Vec_2', 'Mol2Vec_3', 'Mol2Vec_4', ...]
+				('int', [])       : 130 | ['Protein_code1_594', 'Protein_code1_807', 'Protein_code1_272', 'Protein_code1_686', 'Protein_code1_1794', ...]
+				('int', ['bool']) :  33 | ['Protein_code1_278', 'Protein_code1_282', 'Protein_code1_285', 'Protein_code1_1', 'Protein_code1_16', ...]
+			0.1s = Fit runtime
+			463 features in original data used to generate 463 features in processed data.
+	Stage 3 Generators:
+		Fitting IdentityFeatureGenerator...
+			Types of features in original data (raw dtype, special dtypes):
+				('float', [])     : 300 | ['Mol2Vec_0', 'Mol2Vec_1', 'Mol2Vec_2', 'Mol2Vec_3', 'Mol2Vec_4', ...]
+				('int', [])       : 130 | ['Protein_code1_594', 'Protein_code1_807', 'Protein_code1_272', 'Protein_code1_686', 'Protein_code1_1794', ...]
+				('int', ['bool']) :  33 | ['Protein_code1_278', 'Protein_code1_282', 'Protein_code1_285', 'Protein_code1_1', 'Protein_code1_16', ...]
+			Types of features in processed data (raw dtype, special dtypes):
+				('float', [])     : 300 | ['Mol2Vec_0', 'Mol2Vec_1', 'Mol2Vec_2', 'Mol2Vec_3', 'Mol2Vec_4', ...]
+				('int', [])       : 130 | ['Protein_code1_594', 'Protein_code1_807', 'Protein_code1_272', 'Protein_code1_686', 'Protein_code1_1794', ...]
+				('int', ['bool']) :  33 | ['Protein_code1_278', 'Protein_code1_282', 'Protein_code1_285', 'Protein_code1_1', 'Protein_code1_16', ...]
+			0.1s = Fit runtime
+			463 features in original data used to generate 463 features in processed data.
+		Skipping CategoryFeatureGenerator: No input feature with required dtypes.
+		Skipping DatetimeFeatureGenerator: No input feature with required dtypes.
+		Skipping TextSpecialFeatureGenerator: No input feature with required dtypes.
+		Skipping TextNgramFeatureGenerator: No input feature with required dtypes.
+		Skipping IdentityFeatureGenerator: No input feature with required dtypes.
+		Skipping IsNanFeatureGenerator: No input feature with required dtypes.
+	Stage 4 Generators:
+		Fitting DropUniqueFeatureGenerator...
+			Types of features in original data (raw dtype, special dtypes):
+				('float', [])     : 300 | ['Mol2Vec_0', 'Mol2Vec_1', 'Mol2Vec_2', 'Mol2Vec_3', 'Mol2Vec_4', ...]
+				('int', [])       : 130 | ['Protein_code1_594', 'Protein_code1_807', 'Protein_code1_272', 'Protein_code1_686', 'Protein_code1_1794', ...]
+				('int', ['bool']) :  33 | ['Protein_code1_278', 'Protein_code1_282', 'Protein_code1_285', 'Protein_code1_1', 'Protein_code1_16', ...]
+			Types of features in processed data (raw dtype, special dtypes):
+				('float', [])     : 300 | ['Mol2Vec_0', 'Mol2Vec_1', 'Mol2Vec_2', 'Mol2Vec_3', 'Mol2Vec_4', ...]
+				('int', [])       : 130 | ['Protein_code1_594', 'Protein_code1_807', 'Protein_code1_272', 'Protein_code1_686', 'Protein_code1_1794', ...]
+				('int', ['bool']) :  33 | ['Protein_code1_278', 'Protein_code1_282', 'Protein_code1_285', 'Protein_code1_1', 'Protein_code1_16', ...]
+			0.8s = Fit runtime
+			463 features in original data used to generate 463 features in processed data.
+	Types of features in original data (exact raw dtype, raw dtype):
+		('float64', 'float') : 301 | ['Mol2Vec_0', 'Mol2Vec_1', 'Mol2Vec_2', 'Mol2Vec_3', 'Mol2Vec_4', ...]
+		('int64', 'int')     : 162 | ['Protein_code1_594', 'Protein_code1_807', 'Protein_code1_272', 'Protein_code1_278', 'Protein_code1_686', ...]
+	Types of features in original data (raw dtype, special dtypes):
+		('float', []) : 301 | ['Mol2Vec_0', 'Mol2Vec_1', 'Mol2Vec_2', 'Mol2Vec_3', 'Mol2Vec_4', ...]
+		('int', [])   : 162 | ['Protein_code1_594', 'Protein_code1_807', 'Protein_code1_272', 'Protein_code1_278', 'Protein_code1_686', ...]
+	Types of features in processed data (exact raw dtype, raw dtype):
+		('float64', 'float') : 300 | ['Mol2Vec_0', 'Mol2Vec_1', 'Mol2Vec_2', 'Mol2Vec_3', 'Mol2Vec_4', ...]
+		('int64', 'int')     : 130 | ['Protein_code1_594', 'Protein_code1_807', 'Protein_code1_272', 'Protein_code1_686', 'Protein_code1_1794', ...]
+		('int8', 'int')      :  33 | ['Protein_code1_278', 'Protein_code1_282', 'Protein_code1_285', 'Protein_code1_1', 'Protein_code1_16', ...]
+	Types of features in processed data (raw dtype, special dtypes):
+		('float', [])     : 300 | ['Mol2Vec_0', 'Mol2Vec_1', 'Mol2Vec_2', 'Mol2Vec_3', 'Mol2Vec_4', ...]
+		('int', [])       : 130 | ['Protein_code1_594', 'Protein_code1_807', 'Protein_code1_272', 'Protein_code1_686', 'Protein_code1_1794', ...]
+		('int', ['bool']) :  33 | ['Protein_code1_278', 'Protein_code1_282', 'Protein_code1_285', 'Protein_code1_1', 'Protein_code1_16', ...]
+	3.7s = Fit runtime
+	463 features in original data used to generate 463 features in processed data.
+	Train Data (Processed) Memory Usage: 280.44 MB (0.0% of available memory)
+Data preprocessing and feature engineering runtime = 4.12s ...
+AutoGluon will gauge predictive performance using evaluation metric: 'mean_squared_error'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+	To change this, specify the eval_metric parameter of Predictor()
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/learner.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/utils/data/X.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/utils/data/y.pkl
+AutoGluon will fit 2 stack levels (L1 to L2) ...
+Excluded Model Types: ['KNN']
+	Found 'KNN' model in hyperparameters, but 'KNN' is present in `excluded_model_types` and will be removed.
+	Found 'KNN' model in hyperparameters, but 'KNN' is present in `excluded_model_types` and will be removed.
+Model configs that will be trained (in order):
+	LightGBMXT_BAG_L1: 	{'extra_trees': True, 'ag_args': {'name_suffix': 'XT', 'model_type': <class 'autogluon.tabular.models.lgb.lgb_model.LGBModel'>, 'priority': 90}}
+	LightGBM_BAG_L1: 	{'ag_args': {'model_type': <class 'autogluon.tabular.models.lgb.lgb_model.LGBModel'>, 'priority': 90}}
+	RandomForestMSE_BAG_L1: 	{'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile'], 'model_type': <class 'autogluon.tabular.models.rf.rf_model.RFModel'>, 'priority': 80}, 'ag_args_ensemble': {'use_child_oof': True}}
+	CatBoost_BAG_L1: 	{'ag_args': {'model_type': <class 'autogluon.tabular.models.catboost.catboost_model.CatBoostModel'>, 'priority': 70}}
+	ExtraTreesMSE_BAG_L1: 	{'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile'], 'model_type': <class 'autogluon.tabular.models.xt.xt_model.XTModel'>, 'priority': 60}, 'ag_args_ensemble': {'use_child_oof': True}}
+	NeuralNetFastAI_BAG_L1: 	{'ag_args': {'model_type': <class 'autogluon.tabular.models.fastainn.tabular_nn_fastai.NNFastAiTabularModel'>, 'priority': 50}}
+	XGBoost_BAG_L1: 	{'ag_args': {'model_type': <class 'autogluon.tabular.models.xgboost.xgboost_model.XGBoostModel'>, 'priority': 40}}
+	NeuralNetTorch_BAG_L1: 	{'ag_args': {'model_type': <class 'autogluon.tabular.models.tabular_nn.torch.tabular_nn_torch.TabularNeuralNetTorchModel'>, 'priority': 25}}
+	LightGBMLarge_BAG_L1: 	{'learning_rate': 0.03, 'num_leaves': 128, 'feature_fraction': 0.9, 'min_data_in_leaf': 5, 'ag_args': {'model_type': <class 'autogluon.tabular.models.lgb.lgb_model.LGBModel'>, 'name_suffix': 'Large', 'hyperparameter_tune_kwargs': None, 'priority': 0}}
+Fitting 9 L1 models ...
+Fitting model: LightGBMXT_BAG_L1 ... Training model for up to 4316.17s of the 6475.87s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMXT_BAG_L1/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMXT_BAG_L1/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMXT_BAG_L1/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMXT_BAG_L1/model.pkl
+	-0.3247	 = Validation score   (-mean_squared_error)
+	169.8s	 = Training   runtime
+	7.77s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: LightGBM_BAG_L1 ... Training model for up to 4138.31s of the 6298.01s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBM_BAG_L1/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBM_BAG_L1/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBM_BAG_L1/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBM_BAG_L1/model.pkl
+	-0.321	 = Validation score   (-mean_squared_error)
+	203.82s	 = Training   runtime
+	6.66s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: RandomForestMSE_BAG_L1 ... Training model for up to 3931.04s of the 6090.74s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/RandomForestMSE_BAG_L1/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/RandomForestMSE_BAG_L1/utils/model_template.pkl
+	Fitting S1F1 with 'num_gpus': 0, 'num_cpus': 104
+	20.57s	= Estimated out-of-fold prediction time...
+	`use_child_oof` was specified for this model. It will function similarly to a bagged model, but will only fit one child model.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/RandomForestMSE_BAG_L1/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/RandomForestMSE_BAG_L1/model.pkl
+	-0.3374	 = Validation score   (-mean_squared_error)
+	161.84s	 = Training   runtime
+	17.53s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: CatBoost_BAG_L1 ... Training model for up to 3749.37s of the 5909.07s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/CatBoost_BAG_L1/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/CatBoost_BAG_L1/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+E1213 16:44:08.174790713 2772079 chttp2_transport.cc:1103]   Received a GOAWAY with error code ENHANCE_YOUR_CALM and debug data equal to "too_many_pings"
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/CatBoost_BAG_L1/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/CatBoost_BAG_L1/model.pkl
+	-0.3648	 = Validation score   (-mean_squared_error)
+	393.68s	 = Training   runtime
+	0.53s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: ExtraTreesMSE_BAG_L1 ... Training model for up to 3351.92s of the 5511.62s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/ExtraTreesMSE_BAG_L1/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/ExtraTreesMSE_BAG_L1/utils/model_template.pkl
+	Fitting S1F1 with 'num_gpus': 0, 'num_cpus': 104
+	21.48s	= Estimated out-of-fold prediction time...
+	`use_child_oof` was specified for this model. It will function similarly to a bagged model, but will only fit one child model.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/ExtraTreesMSE_BAG_L1/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/ExtraTreesMSE_BAG_L1/model.pkl
+	-0.3158	 = Validation score   (-mean_squared_error)
+	43.26s	 = Training   runtime
+	16.8s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: NeuralNetFastAI_BAG_L1 ... Training model for up to 3289.21s of the 5448.91s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetFastAI_BAG_L1/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetFastAI_BAG_L1/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetFastAI_BAG_L1/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetFastAI_BAG_L1/model.pkl
+	-0.4552	 = Validation score   (-mean_squared_error)
+	157.24s	 = Training   runtime
+	3.44s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: XGBoost_BAG_L1 ... Training model for up to 3128.95s of the 5288.65s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/XGBoost_BAG_L1/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/XGBoost_BAG_L1/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/XGBoost_BAG_L1/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/XGBoost_BAG_L1/model.pkl
+	-0.3201	 = Validation score   (-mean_squared_error)
+	691.47s	 = Training   runtime
+	3.65s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: NeuralNetTorch_BAG_L1 ... Training model for up to 2434.07s of the 4593.78s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetTorch_BAG_L1/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetTorch_BAG_L1/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetTorch_BAG_L1/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetTorch_BAG_L1/model.pkl
+	-0.4569	 = Validation score   (-mean_squared_error)
+	1107.01s	 = Training   runtime
+	10.5s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: LightGBMLarge_BAG_L1 ... Training model for up to 1322.93s of the 3482.63s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMLarge_BAG_L1/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMLarge_BAG_L1/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMLarge_BAG_L1/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMLarge_BAG_L1/model.pkl
+	-0.3129	 = Validation score   (-mean_squared_error)
+	557.85s	 = Training   runtime
+	5.8s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Not enough time left to finish repeated k-fold bagging, stopping early ...
+Completed 1/20 k-fold bagging repeats ...
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMXT_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBM_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/RandomForestMSE_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/CatBoost_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/ExtraTreesMSE_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetFastAI_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/XGBoost_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetTorch_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMLarge_BAG_L1/utils/oof.pkl
+Model configs that will be trained (in order):
+	WeightedEnsemble_L2: 	{'ag_args': {'valid_base': False, 'name_bag_suffix': '', 'model_type': <class 'autogluon.core.models.greedy_ensemble.greedy_weighted_ensemble_model.GreedyWeightedEnsembleModel'>, 'priority': 0}, 'ag_args_ensemble': {'save_bag_folds': True}}
+Fitting model: WeightedEnsemble_L2 ... Training model for up to 431.62s of the 2920.04s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/WeightedEnsemble_L2/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/WeightedEnsemble_L2/utils/model_template.pkl
+	Fitting S1F1 with 'num_gpus': 0, 'num_cpus': 104
+Ensemble size: 75
+Ensemble weights: 
+[0.         0.         0.         0.         0.36       0.04
+ 0.28       0.06666667 0.25333333]
+	0.4s	= Estimated out-of-fold prediction time...
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/WeightedEnsemble_L2/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/WeightedEnsemble_L2/model.pkl
+	-0.2937	 = Validation score   (-mean_squared_error)
+	0.95s	 = Training   runtime
+	0.0s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Excluded Model Types: ['KNN']
+	Found 'KNN' model in hyperparameters, but 'KNN' is present in `excluded_model_types` and will be removed.
+	Found 'KNN' model in hyperparameters, but 'KNN' is present in `excluded_model_types` and will be removed.
+Model configs that will be trained (in order):
+	LightGBMXT_BAG_L2: 	{'extra_trees': True, 'ag_args': {'name_suffix': 'XT', 'model_type': <class 'autogluon.tabular.models.lgb.lgb_model.LGBModel'>, 'priority': 90}}
+	LightGBM_BAG_L2: 	{'ag_args': {'model_type': <class 'autogluon.tabular.models.lgb.lgb_model.LGBModel'>, 'priority': 90}}
+	RandomForestMSE_BAG_L2: 	{'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile'], 'model_type': <class 'autogluon.tabular.models.rf.rf_model.RFModel'>, 'priority': 80}, 'ag_args_ensemble': {'use_child_oof': True}}
+	CatBoost_BAG_L2: 	{'ag_args': {'model_type': <class 'autogluon.tabular.models.catboost.catboost_model.CatBoostModel'>, 'priority': 70}}
+	ExtraTreesMSE_BAG_L2: 	{'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile'], 'model_type': <class 'autogluon.tabular.models.xt.xt_model.XTModel'>, 'priority': 60}, 'ag_args_ensemble': {'use_child_oof': True}}
+	NeuralNetFastAI_BAG_L2: 	{'ag_args': {'model_type': <class 'autogluon.tabular.models.fastainn.tabular_nn_fastai.NNFastAiTabularModel'>, 'priority': 50}}
+	XGBoost_BAG_L2: 	{'ag_args': {'model_type': <class 'autogluon.tabular.models.xgboost.xgboost_model.XGBoostModel'>, 'priority': 40}}
+	NeuralNetTorch_BAG_L2: 	{'ag_args': {'model_type': <class 'autogluon.tabular.models.tabular_nn.torch.tabular_nn_torch.TabularNeuralNetTorchModel'>, 'priority': 25}}
+	LightGBMLarge_BAG_L2: 	{'learning_rate': 0.03, 'num_leaves': 128, 'feature_fraction': 0.9, 'min_data_in_leaf': 5, 'ag_args': {'model_type': <class 'autogluon.tabular.models.lgb.lgb_model.LGBModel'>, 'name_suffix': 'Large', 'hyperparameter_tune_kwargs': None, 'priority': 0}}
+Fitting 9 L2 models ...
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMXT_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBM_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/RandomForestMSE_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/CatBoost_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/ExtraTreesMSE_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetFastAI_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/XGBoost_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetTorch_BAG_L1/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMLarge_BAG_L1/utils/oof.pkl
+Fitting model: LightGBMXT_BAG_L2 ... Training model for up to 2919.08s of the 2918.91s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMXT_BAG_L2/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMXT_BAG_L2/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMXT_BAG_L2/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMXT_BAG_L2/model.pkl
+	-0.2758	 = Validation score   (-mean_squared_error)
+	21.06s	 = Training   runtime
+	0.7s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: LightGBM_BAG_L2 ... Training model for up to 2895.37s of the 2895.26s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBM_BAG_L2/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBM_BAG_L2/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBM_BAG_L2/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBM_BAG_L2/model.pkl
+	-0.2739	 = Validation score   (-mean_squared_error)
+	12.82s	 = Training   runtime
+	0.61s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: RandomForestMSE_BAG_L2 ... Training model for up to 2879.99s of the 2879.87s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/RandomForestMSE_BAG_L2/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/RandomForestMSE_BAG_L2/utils/model_template.pkl
+	Fitting S1F1 with 'num_gpus': 0, 'num_cpus': 104
+	22.07s	= Estimated out-of-fold prediction time...
+	`use_child_oof` was specified for this model. It will function similarly to a bagged model, but will only fit one child model.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/RandomForestMSE_BAG_L2/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/RandomForestMSE_BAG_L2/model.pkl
+	-0.2408	 = Validation score   (-mean_squared_error)
+	194.97s	 = Training   runtime
+	17.63s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: CatBoost_BAG_L2 ... Training model for up to 2665.08s of the 2664.96s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/CatBoost_BAG_L2/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/CatBoost_BAG_L2/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/CatBoost_BAG_L2/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/CatBoost_BAG_L2/model.pkl
+	-0.2748	 = Validation score   (-mean_squared_error)
+	43.43s	 = Training   runtime
+	0.26s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: ExtraTreesMSE_BAG_L2 ... Training model for up to 2619.13s of the 2619.01s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/ExtraTreesMSE_BAG_L2/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/ExtraTreesMSE_BAG_L2/utils/model_template.pkl
+	Fitting S1F1 with 'num_gpus': 0, 'num_cpus': 104
+	21.26s	= Estimated out-of-fold prediction time...
+	`use_child_oof` was specified for this model. It will function similarly to a bagged model, but will only fit one child model.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/ExtraTreesMSE_BAG_L2/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/ExtraTreesMSE_BAG_L2/model.pkl
+	-0.2383	 = Validation score   (-mean_squared_error)
+	62.26s	 = Training   runtime
+	19.54s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: NeuralNetFastAI_BAG_L2 ... Training model for up to 2534.66s of the 2534.54s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetFastAI_BAG_L2/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetFastAI_BAG_L2/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetFastAI_BAG_L2/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetFastAI_BAG_L2/model.pkl
+	-0.2767	 = Validation score   (-mean_squared_error)
+	1085.88s	 = Training   runtime
+	4.37s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: XGBoost_BAG_L2 ... Training model for up to 1445.64s of the 1445.52s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/XGBoost_BAG_L2/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/XGBoost_BAG_L2/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/XGBoost_BAG_L2/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/XGBoost_BAG_L2/model.pkl
+	-0.2721	 = Validation score   (-mean_squared_error)
+	16.64s	 = Training   runtime
+	1.88s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: NeuralNetTorch_BAG_L2 ... Training model for up to 1425.87s of the 1425.75s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetTorch_BAG_L2/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetTorch_BAG_L2/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetTorch_BAG_L2/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetTorch_BAG_L2/model.pkl
+	-0.2978	 = Validation score   (-mean_squared_error)
+	124.99s	 = Training   runtime
+	9.58s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Fitting model: LightGBMLarge_BAG_L2 ... Training model for up to 1297.25s of the 1297.13s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMLarge_BAG_L2/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMLarge_BAG_L2/utils/model_template.pkl
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting  with 'num_gpus': 0, 'num_cpus': 52
+	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMLarge_BAG_L2/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMLarge_BAG_L2/model.pkl
+	-0.2646	 = Validation score   (-mean_squared_error)
+	22.69s	 = Training   runtime
+	0.84s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Not enough time left to finish repeated k-fold bagging, stopping early ...
+Completed 1/20 k-fold bagging repeats ...
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMXT_BAG_L2/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBM_BAG_L2/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/RandomForestMSE_BAG_L2/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/CatBoost_BAG_L2/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/ExtraTreesMSE_BAG_L2/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetFastAI_BAG_L2/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/XGBoost_BAG_L2/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetTorch_BAG_L2/utils/oof.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMLarge_BAG_L2/utils/oof.pkl
+Model configs that will be trained (in order):
+	WeightedEnsemble_L3: 	{'ag_args': {'valid_base': False, 'name_bag_suffix': '', 'model_type': <class 'autogluon.core.models.greedy_ensemble.greedy_weighted_ensemble_model.GreedyWeightedEnsembleModel'>, 'priority': 0}, 'ag_args_ensemble': {'save_bag_folds': True}}
+Fitting model: WeightedEnsemble_L3 ... Training model for up to 360.0s of the 1270.47s of remaining time.
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/WeightedEnsemble_L3/utils/model_template.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/WeightedEnsemble_L3/utils/model_template.pkl
+	Fitting S1F1 with 'num_gpus': 0, 'num_cpus': 104
+Ensemble size: 11
+Ensemble weights: 
+[0.         0.         0.36363636 0.         0.63636364 0.
+ 0.         0.         0.        ]
+	0.18s	= Estimated out-of-fold prediction time...
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/WeightedEnsemble_L3/utils/oof.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/WeightedEnsemble_L3/model.pkl
+	-0.2371	 = Validation score   (-mean_squared_error)
+	0.71s	 = Training   runtime
+	0.0s	 = Validation runtime
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+AutoGluon training complete, total runtime = 5210.84s ... Best model: "WeightedEnsemble_L3"
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/trainer.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/learner.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/predictor.pkl
+Saving AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/__version__ with contents "0.5.2"
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load("AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/")
+
+ 2023/12/13 18:01:25 
+ Trained  humanalltrainconcat_selefeatureTOP200 87.59708681901296  mins  
+
+
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/CatBoost_BAG_L1/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/ExtraTreesMSE_BAG_L1/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMLarge_BAG_L1/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMXT_BAG_L1/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBM_BAG_L1/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetFastAI_BAG_L1/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetTorch_BAG_L1/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/RandomForestMSE_BAG_L1/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/XGBoost_BAG_L1/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/CatBoost_BAG_L2/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/ExtraTreesMSE_BAG_L2/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMLarge_BAG_L2/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBMXT_BAG_L2/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/LightGBM_BAG_L2/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetFastAI_BAG_L2/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/NeuralNetTorch_BAG_L2/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/RandomForestMSE_BAG_L2/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/WeightedEnsemble_L2/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/WeightedEnsemble_L3/model.pkl
+Loading: AutogluonTRAIN1213_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_108min/models/XGBoost_BAG_L2/model.pkl
+
+
+                      model  score_test  ...  can_infer  fit_order
+0      WeightedEnsemble_L3   -0.269320  ...       True         20
+1     ExtraTreesMSE_BAG_L2   -0.269504  ...       True         15
+2   RandomForestMSE_BAG_L2   -0.272663  ...       True         13
+3     LightGBMLarge_BAG_L2   -0.264907  ...       True         19
+4           XGBoost_BAG_L2   -0.267463  ...       True         17
+5          LightGBM_BAG_L2   -0.268476  ...       True         12
+6          CatBoost_BAG_L2   -0.267567  ...       True         14
+7        LightGBMXT_BAG_L2   -0.266682  ...       True         11
+8   NeuralNetFastAI_BAG_L2   -0.264732  ...       True         16
+9      WeightedEnsemble_L2   -0.281447  ...       True         10
+10   NeuralNetTorch_BAG_L2   -0.277859  ...       True         18
+11    LightGBMLarge_BAG_L1   -0.276968  ...       True          9
+12    ExtraTreesMSE_BAG_L1   -0.313132  ...       True          5
+13          XGBoost_BAG_L1   -0.277473  ...       True          7
+14         LightGBM_BAG_L1   -0.285414  ...       True          2
+15       LightGBMXT_BAG_L1   -0.296215  ...       True          1
+16  RandomForestMSE_BAG_L1   -0.333096  ...       True          3
+17         CatBoost_BAG_L1   -0.340749  ...       True          4
+18  NeuralNetFastAI_BAG_L1   -0.417125  ...       True          6
+19   NeuralNetTorch_BAG_L1   -0.387174  ...       True          8
+
+[20 rows x 16 columns] 
+ Best model:  WeightedEnsemble_L3
+
+ 2023/12/13 18:02:29 
+
+GPCR_to_trainAgonistAntagonist_humanalltrainconcat_selefeatureTOP200.csv  size  80750 
+ BEST model:  WeightedEnsemble_L3 , score:  -0.24
+
+ 2023/12/13 18:02:29  done training:  3 GPCR_to_trainAgonistAntagonist_humanalltrainconcat_selefeatureTOP200.csv
+
+ ********************************* 
+   trainnum  ...                                                                 File_Name
+0      0.0  ...                    GPCR_to_trainAgonistAntagonist_humanalltrainconcat.csv
+2        2  ...  GPCR_to_trainAgonistAntagonist_humanalltrainconcat_selefeatureTOP200.csv
+
+[2 rows x 16 columns] 
+ ********************************* 
+
+
+ 2023/12/13 18:02:29  done training proteins 
+ ['GPCR_to_trainAgonistAntagonist_humanalltrainconcat_selefeatureTOP200.csv'] 3 
+
+
+
+
+
+
+
+
+ 2023/12/13 18:02:29 
+ Total =  1.4775812731186548  hrs 
+
