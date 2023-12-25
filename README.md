@@ -26,11 +26,11 @@ sh extract_files.sh
 ```
 
 Script files:
-1. `GPCR_MTL_dataprocess.ipynb`: scripts + original dataset
-2. `GPCR_MTL_autogluontrain.ipynb`: scripts for separate protein Agonist training using Autogluon AutoML & separate protein Antagonist training using Autogluon AutoML & separate protein Agonist & Antagonist training using Autogluon AutoML
-3. `GPCR_MTL_Mol2vec.ipynb`: scripts for using Mol2vec replace chemical features + result data
-4. `GPCR_MTL_FeatureSelection.ipynb`: scripts for using mRMR feature selection of the files + FeatureSelection_GPCRtrain + result data
-5. `GPCR_MTL_TRAINevaluate.ipynb`: scripts for evaluation of validation data and orphan data + result data
-6. `GPCR_MTL_similarity.ipynb`: scripts for calculate Tanimoto similarity with or without mRMR selected features in 7 parts of the GPCR
-7. `GPCR_MTL_colorPDB.ipynb`: scripts for mapping the mRMR selected features into the protein structure files
+1. `GPCR_MTL_dataprocess.ipynb`: script + original dataset
+2. `GPCR_MTL_autogluontrain.ipynb`: script for separate protein Agonist training using Autogluon AutoML & separate protein Antagonist training using Autogluon AutoML & separate protein Agonist & Antagonist training using Autogluon AutoML
+3. `GPCR_MTL_Mol2vec.ipynb`: script for using Mol2vec replace chemical features + result data
+4. `GPCR_MTL_FeatureSelection.ipynb`: script for using mRMR feature selection of the files + FeatureSelection_GPCRtrain + result data
+5. `GPCR_MTL_TRAINevaluate.ipynb`: script for evaluation of validation data and orphan data + result data
+6. `GPCR_MTL_similarity.ipynb`: script for calculate Tanimoto similarity with or without mRMR selected features in 7 parts of the GPCR
+7. `GPCR_MTL_colorPDB.ipynb`: script for mapping the mRMR selected features into the protein structure files
 
