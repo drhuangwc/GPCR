@@ -33,4 +33,6 @@ Script files:
 5. `GPCR_MTL_TRAINevaluate.ipynb`: script for evaluation of validation data and orphan data + result data
 6. `GPCR_MTL_similarity.ipynb`: script for calculate Tanimoto similarity with or without mRMR selected features in 7 parts of the GPCR
 7. `GPCR_MTL_colorPDB.ipynb`: script for mapping the mRMR selected features into the protein structure files
+8. `GPCR_MTL_GPRC5A_pred.ipynb`: script for the prediction of GPRC5A activities
+
 
