@@ -30,17 +30,22 @@ cd GPCR_similarty
 tar -xvf GPCR_to_trainAgonistAntagonist_humanalltrainconcat_selefeatureTOP200.tar.xz
 tar -xvf similarty_proteinpairsimilarity20230624_TOP200_proteinseq20220915_align_7CUT.tar.xz
 
+
+###### FOLDER and subfolders: Human_AgonistAntagonist/GPCR_to_test_Mol2Vec
+
+cd ../GPCR_to_test_Mol2Vec
+cat seperatePROTEIN_Mol2Vec.tar.xz.part* > seperatePROTEIN_Mol2Vec.tar.xz
+tar -xvf seperatePROTEIN_Mol2Vec.tar.xz
+
 ###### FOLDER and subfolders: Human_AgonistAntagonist/GPCR_to_test_HUMANdeletion95valid
 
 cd ../GPCR_to_test_HUMANdeletion95valid
-
 cat AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz.part* > AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz
 tar -xvf AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz
 
 ###### FOLDER and subfolders: Human_AgonistAntagonist/GPCR_to_test_HUMANmutant95valid
 
 cd ../GPCR_to_test_HUMANmutant95valid
-
 cat AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz.part* > AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz
 tar -xvf AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz
 
@@ -49,7 +54,6 @@ tar -xvf AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz
 
 
 cd ../GPCR_separatePROTEIN
-
 cat Agonist.tar.xz.part* > Agonist.tar.xz
 tar -xvf Agonist.tar.xz
 
