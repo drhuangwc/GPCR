@@ -72,8 +72,8 @@ tar -xvf Antagonist.tar.xz
 
 
 ###### FOLDER and subfolders: Human_AgonistAntagonist/GPCR_to_test_FeatureSelection
-cd ../GPCR_to_test_FeatureSelection_tarxz_files
-cat GPCR_to_test_FeatureSelection.tar.xz.part* GPCR_to_test_FeatureSelection.tar.xz
+cd ../GPCR_to_test_FeatureSelection
+cat GPCR_to_test_FeatureSelection.tar.xz.part* > GPCR_to_test_FeatureSelection.tar.xz
 tar -xvf GPCR_to_test_FeatureSelection.tar.xz
 
 echo "DONE all files extracted."
