@@ -8,6 +8,12 @@ tar -xvf GPCR_to_trainAgonistAntagonist_humanalltrainconcat_selefeatureTOP200.ta
 
 tar -xvf OriPDB.tar.xz
 
+###### FOLDER and subfolders: GPCR_agonist_GPRC5A
+
+cd ../GPCR_agonist_GPRC5A
+cat AutogluonTRAIN0618_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_102min.tar.xz.parta* > AutogluonTRAIN0618_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_102min.tar.xz 
+tar -xvf AutogluonTRAIN0618_AgonistAntagonist_humanalltrainconcat_selefeatureTOP200_102min.tar.xz
+
 ###### FOLDER and subfolders: Human_AgonistAntagonist
 
 cd ../Human_AgonistAntagonist
