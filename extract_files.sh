@@ -67,14 +67,14 @@ echo "-------------------------- FOLDER and subfolders: Human_AgonistAntagonist/
 cd ../GPCR_to_test_HUMANdeletion95valid
 cat AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz.part* > AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz
 echo "tar -xf AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz"
-tar -xf AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz
+tar -xvf AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz
 
 ###### FOLDER and subfolders: Human_AgonistAntagonist/GPCR_to_test_HUMANmutant95valid
 echo "-------------------------- FOLDER and subfolders: Human_AgonistAntagonist/GPCR_to_test_HUMANmutant95valid --------------------------"
 cd ../GPCR_to_test_HUMANmutant95valid
 cat AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz.part* > AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz
 echo "tar -xf AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz"
-tar -xf AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz
+tar -xvf AutogluonTRAIN0520_AgonistAntagonist_humanalltrainconcat_420min.tar.xz
 
 
 ###### FOLDER and subfolders: Human_AgonistAntagonist/GPCR_separatePROTEIN
@@ -83,15 +83,15 @@ echo "-------------------------- FOLDER and subfolders: Human_AgonistAntagonist/
 cd ../GPCR_separatePROTEIN
 cat Agonist.tar.xz.part* > Agonist.tar.xz
 echo "tar -xf Agonist.tar.xz"
-tar -xf Agonist.tar.xz
+tar -xvf Agonist.tar.xz
 echo "--------------------------"
 cat AgonistAntagonist.tar.xz.part* > AgonistAntagonist.tar.xz
 echo "tar -xf AgonistAntagonist.tar.xz"
-tar -xf AgonistAntagonist.tar.xz
+tar -xvf AgonistAntagonist.tar.xz
 echo "--------------------------"
 cat Antagonist.tar.xz.part* > Antagonist.tar.xz
 echo "tar -xf Antagonist.tar.xz"
-tar -xf Antagonist.tar.xz
+tar -xvf Antagonist.tar.xz
 echo "--------------------------"
 
 ###### FOLDER and subfolders: Human_AgonistAntagonist/GPCR_to_test_FeatureSelection
