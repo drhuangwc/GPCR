@@ -1,5 +1,6 @@
 # Decrypting Orphan GPCR Drug Discovery via Multitask Learning
-Wei-Cheng Huang1, Wei-Ting Lin1, Ming-Shiu Hung1, Jinq-Chyi Lee1, Chun-Wei Tung1*
+Wei-Cheng Huang 1, Wei-Ting Lin 1, Ming-Shiu Hung 1, Jinq-Chyi Lee 1, Chun-Wei Tung 1* 
+
 1 Institute of Biotechnology and Pharmaceutical Research, National Health Research Institutes, Miaoli County, Taiwan
 * Correspondence: cwtung@nhri.edu.tw 
 
@@ -14,7 +15,7 @@ Multitask Learning; G Protein-Coupled Receptors; GPCR; Feature Selection; Ligand
 
 
 # Python installation and environment setup
-You may download whole directory with script files and compressed result files.
+You may download the whole directory with script files and compressed result files.
 
 1. use the python_env_setup.sh file to setup all dependencies
 2. use the extract_files.sh file to extract all the result files for this task.
@@ -22,7 +23,7 @@ You may download whole directory with script files and compressed result files.
 ```
 git clone git@github.com:drhuangwc/GPCR.git
 sh python_env_setup.sh
-sh extract_files.sh
+sh extract_files.sh > files.out &
 ```
 
 Script files:
