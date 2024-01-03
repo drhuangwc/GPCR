@@ -25,9 +25,13 @@ tar -xvf AutogluonTRAIN0618_AgonistAntagonist_humanalltrainconcat_selefeatureTOP
 
 echo "-------------------------- FOLDER and subfolders: Human_AgonistAntagonist --------------------------"
 cd ../Human_AgonistAntagonist
+echo "tar -xvf GPCR_AgonistAntagonist20220915.tar.xz"
 tar -xvf GPCR_AgonistAntagonist20220915.tar.xz
+echo "tar -xvf GPCR_AgonistAntagonist_protein20220915.tar.xz"
 tar -xvf GPCR_AgonistAntagonist_protein20220915.tar.xz
+echo "tar -xvf GPCR_AgonistAntagonist_protein_align_ptcode123_20220915.tar.xz"
 tar -xvf GPCR_AgonistAntagonist_protein_align_ptcode123_20220915.tar.xz
+
 echo "--------------------------"
 cat GPCR_AgonistAntagonist_protein_align_ptcode123_padel1d2d20220921_rdkECFP1019.tar.xz.part* > GPCR_AgonistAntagonist_protein_align_ptcode123_padel1d2d20220921_rdkECFP1019.tar.xz 
 echo "tar -xvf GPCR_AgonistAntagonist_protein_align_ptcode123_padel1d2d20220921_rdkECFP1019.tar.xz"
